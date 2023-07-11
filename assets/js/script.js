@@ -27,7 +27,6 @@ var questions = [
   }
 ];
 
-// Other variables
 var quizContainer = document.getElementById("quiz-container");
 var startContainer = document.getElementById("start-container");
 var resultContainer = document.getElementById("result-container");
@@ -71,7 +70,7 @@ clearButton.addEventListener("click", clearLeaderboard);
 function startQuiz() {
   startButton.parentNode.style.display = "none";
   quizContainer.style.display = "block";
-  timeLeftElement.textContent = timeLeft; // Set initial time
+  timeLeftElement.textContent = timeLeft;
   startTimer();
   showQuestion();
 }
@@ -81,12 +80,12 @@ function startTimer() {
   timerInterval = setInterval(function() {
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
-      timeLeft = 0; // Set timeLeft to 0 if it goes negative
-      timeLeftElement.textContent = 0; // Display 0 if timeLeft is negative
+      timeLeft = 0;
+      timeLeftElement.textContent = 0;
       endQuiz();
     } else {
       timeLeft--;
-      timeLeftElement.textContent = timeLeft; // Display timeLeft as is
+      timeLeftElement.textContent = timeLeft;
     }
   }, 1000);
 }
@@ -121,9 +120,9 @@ function checkAnswer(event) {
     timeLeft -= 10;
 
     if (timeLeft <= 0) {
-      timeLeft = 0; // Set timeLeft to 0 if it goes negative
+      timeLeft = 0;
       endQuiz();
-      return; // Immediately end the quiz if time reaches zero
+      return;
     }
 
     resultContainer.textContent = "Wrong!";
@@ -144,7 +143,7 @@ function endQuiz() {
   quizContainer.style.display = "none";
   scoreContainer.style.display = "block";
   var scoreElement = document.getElementById("score");
-  scoreElement.textContent = "Your Score: " + timeLeft; // Update score display
+  scoreElement.textContent = "Your Score: " + timeLeft;
 }
 
 // Function to save the score
@@ -188,7 +187,6 @@ function showLeaderboard() {
   clearInterval(timerInterval);
 }
 
-
 // Function to restart the quiz
 function restartQuiz() {
   leaderboardContainer.style.display = "none";
@@ -202,7 +200,6 @@ function restartQuiz() {
   clearInterval(timerInterval);
   timeLeftElement.textContent = timeLeft;
 }
-
 
 // Function to reset the leaderboard
 function clearLeaderboard() {
