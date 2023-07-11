@@ -40,7 +40,7 @@ var startButton = document.getElementById("start-button");
 var saveButton = document.getElementById("save-button");
 var leaderboardButton = document.getElementById("leaderboard-button");
 var restartButton = document.getElementById("restart-button");
-var resetButton = document.getElementById("reset-button");
+var clearButton = document.getElementById("clear-button");
 var initialsInput = document.getElementById("initials");
 var leaderboardList = document.getElementById("leaderboard-list");
 var currentQuestionIndex = 0;
@@ -65,7 +65,7 @@ leaderboardButton.addEventListener("click", showLeaderboard);
 restartButton.addEventListener("click", restartQuiz);
 
 // Reset button click event listener
-resetButton.addEventListener("click", resetLeaderboard);
+clearButton.addEventListener("click", clearLeaderboard);
 
 // Function to start the quiz
 function startQuiz() {
@@ -205,7 +205,7 @@ function restartQuiz() {
 
 
 // Function to reset the leaderboard
-function resetLeaderboard() {
+function clearLeaderboard() {
   leaderboard = [];
   leaderboardList.innerHTML = "";
 }
