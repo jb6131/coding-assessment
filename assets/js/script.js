@@ -99,7 +99,7 @@ function showQuestion() {
   for (var i = 0; i < question.choices.length; i++) {
     var choice = document.createElement("li");
     choice.textContent = question.choices[i];
-    choice.setAttribute("data-index", i);
+    choice.setAttribute("index", i);
     choice.classList.add("choice");
     choicesElement.appendChild(choice);
   }
@@ -112,7 +112,7 @@ function showQuestion() {
 // Function to check the selected answer
 function checkAnswer(event) {
   var selectedChoice = event.target;
-  var selectedAnswer = parseInt(selectedChoice.getAttribute("data-index"));
+  var selectedAnswer = parseInt(selectedChoice.getAttribute("index"));
 
   if (selectedAnswer === questions[currentQuestionIndex].correctAnswer) {
     resultContainer.textContent = "Correct!";
