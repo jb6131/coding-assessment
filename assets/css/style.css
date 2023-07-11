@@ -1,14 +1,60 @@
+:root {
+  --light-blue: #00A6FB;
+  --blue: #0394E3;
+  --hover-blue: #0582CA;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+
+input {
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+}
+
+p {
+  width: 40%;
+  text-align: center;
+  font-size: 1.2rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  margin: auto;
+}
+
+ul #choices {
+  list-style: none;
+}
+
+.choice {
+  background-color: var(--blue);
+  padding: 10px;
+  margin: 2rem 42rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.choice:hover {
+  background-color: var(--hover-blue);
+}
+
+
 .main {
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #quiz-container {
-  /* display: none; */
+  display: none;
 }
 
-#start-container, #score-container, #leaderboard-container {
-  /* display: none; */
+#score-container, #leaderboard-container {
+  display: none;
 }
 
 #timer {
@@ -34,13 +80,44 @@
   margin-top: 2rem;
 }
 
+#start-button {
+  background-color: var(--blue);
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+}
+
 #leaderboard-button {
   position: fixed;
   left: 1rem;
+  background: none;
+  border: none;
+  color: var(--light-blue);
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#save-button,
+#restart-button,
+#clear-button {
+  background-color: var(--blue);
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0.6rem;
+}
+
+#start-button:hover,
+#save-button:hover,
+#restart-button:hover,
+#clear-button:hover {
+  background-color: var(--hover-blue);
+  cursor: pointer;
 }
 
 #leaderboard-container {
-  /* display: none; */
+  display: none;
   margin-top: 3.5rem;
 }
 
@@ -56,8 +133,4 @@
 
 #leaderboard-list li {
   margin-bottom: 0.8rem;
-}
-
-#restart-button, #reset-button {
-  margin-top: 0.8rem;
 }
