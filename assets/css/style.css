@@ -2,6 +2,8 @@
   --light-blue: #00A6FB;
   --blue: #0394E3;
   --hover-blue: #0582CA;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
@@ -34,7 +36,7 @@ ul #choices {
 .choice {
   background-color: var(--blue);
   padding: 10px;
-  margin: 2rem 42rem;
+  border: solid black;
   border-radius: 1rem;
   cursor: pointer;
 }
@@ -47,6 +49,26 @@ ul #choices {
 .main {
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#choices {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: fit-content;
+  list-style-type: none;
+  text-align: center;
+}
+
+#question-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
 }
 
 #quiz-container {

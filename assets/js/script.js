@@ -103,10 +103,6 @@ function showQuestion() {
     choice.classList.add("choice");
     choicesElement.appendChild(choice);
   }
-
-  choicesElement.style.listStyle = "none";
-  choicesElement.style.padding = "0";
-  choicesElement.style.margin = "0";
 }
 
 // Function to check the selected answer
